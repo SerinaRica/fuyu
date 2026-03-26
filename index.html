@@ -38,7 +38,6 @@
               <div class="contact">
                 <a class="pill" href="mailto:fuyu05anastasia@163.com">fuyu05anastasia@163.com</a>
                 <a class="pill" href="mailto:fuyu05@stu.scu.edu.cn">fuyu05@stu.scu.edu.cn</a>
-                <a class="pill" href="tel:+8615215906870">+86 152 1590 6870</a>
               </div>
               <div class="chips">
                 <span class="chip">HCI × AI</span>
@@ -69,13 +68,15 @@
             <div class="about">
               <div class="about-main">
                 <p class="lede">
-                  I’m a Computer Science student at Sichuan University (Pittsburgh Institute). I like turning research ideas into usable systems: recommendation,
-                  interaction, and reasoning—especially where constraints, safety, and interpretability matter.
+                  I am a Computer Science undergraduate at Sichuan University (Pittsburgh Institute) with a profound passion for the intersection of Human-Computer Interaction (HCI) and Artificial Intelligence (AI). My research focuses on turning complex, unstructured ideas into practical, human-centered systems. I am particularly interested in how we can leverage Knowledge Graphs and Large Language Model (LLM) reasoning to build recommendation and interaction systems that are not only accurate but also interpretable, safe, and aware of real-world constraints.
+                </p>
+                <p class="lede">
+                  I believe that AI should empower people in their daily lives. By bridging multimodal signals, structured domain knowledge, and empathetic dialogue, I strive to design systems that feel natural to interact with and provide quantifiable, trustworthy assistance in critical domains like healthcare and education.
                 </p>
                 <div class="mini">
                   <div class="mini-k">Now</div>
                   <div class="mini-v">
-                    Building a health-promoting kitchen assistant for aging populations, combining nutrition knowledge, persuasive design, and multimodal interaction.
+                    Building a health-promoting kitchen assistant for aging populations, combining personalized nutrition knowledge, persuasive technology, and multimodal voice/vision interaction.
                   </div>
                 </div>
               </div>
@@ -199,11 +200,12 @@
                   <span class="acc-meta">Jan 2026 – Present</span>
                 </summary>
                 <div class="acc-body">
-                  <p class="acc-lede">Persuasive, personalized nutrition with multimodal interaction for healthier cooking.</p>
+                  <p class="acc-lede">A novel HCI-AI system designed to assist elderly individuals with chronic diseases in adopting healthier cooking practices through persuasive technology and personalized nutrition.</p>
                   <ul class="bullets">
-                    <li>Core recommendation engine combining food knowledge graphs with medical dietary guidelines.</li>
-                    <li>Full-stack architecture (backend APIs + frontend) with accessibility as a priority.</li>
-                    <li>Planning vision + voice pipelines for hands-free guidance; building an empathetic dialogue agent.</li>
+                    <li><strong>Recommendation Engine:</strong> Built the core engine integrating food knowledge graphs with medical dietary guidelines, enabling constraint-aware, health-oriented recipe suggestions.</li>
+                    <li><strong>Full-Stack Architecture:</strong> Engineered the backend APIs and frontend interface with a strong focus on accessibility, laying the groundwork for multimodal capabilities.</li>
+                    <li><strong>Multimodal Interaction:</strong> Designing vision pipelines for ingredient detection and voice pipelines using LLMs for natural, hands-free conversational guidance in the kitchen.</li>
+                    <li><strong>Empathetic Companionship:</strong> Currently incorporating an empathetic dialogue agent to improve user adherence, trust, and overall quality of life.</li>
                   </ul>
                 </div>
               </details>
@@ -214,10 +216,11 @@
                   <span class="acc-meta">Oct 2025 – Feb 2026</span>
                 </summary>
                 <div class="acc-body">
+                  <p class="acc-lede">A neuro-symbolic framework combining deep time-series modeling with rule-supported reasoning for early and interpretable academic risk detection.</p>
                   <ul class="bullets">
-                    <li>Interpretable framework: Transformer time-series modeling + rule-supported explanations.</li>
-                    <li>Early detection up to 19 weeks in advance on OULAD (earlier than strong deep baselines).</li>
-                    <li>High AUC/F1/precision/recall with actionable intervention strategies.</li>
+                    <li><strong>Architecture Design:</strong> Designed and implemented EduRiskX, integrating Transformer-based time-series modeling with F-Logic reasoning for transparent explanations.</li>
+                    <li><strong>Performance Breakthrough:</strong> Achieved early detection on the OULAD dataset, identifying at-risk students up to 19 weeks in advance—substantially earlier than strong deep baselines like PatchTST and iTransformer (typically 15–16 weeks).</li>
+                    <li><strong>Actionable Insights:</strong> Maintained high AUC, F1-Score, precision, and recall while providing theory-aligned explanations and actionable intervention strategies for educators.</li>
                   </ul>
                 </div>
               </details>
@@ -228,10 +231,11 @@
                   <span class="acc-meta">Jun 2025 – Nov 2025</span>
                 </summary>
                 <div class="acc-body">
+                  <p class="acc-lede">Collaborated with the Department of Mental Health to develop an intelligent auxiliary diagnosis system for mental health assessment.</p>
                   <ul class="bullets">
-                    <li>Auxiliary diagnosis system combining knowledge graphs and multimodal signal analysis for mental health assessment.</li>
-                    <li>Domain knowledge graph + multimodal emotion module (speech + physiological signals).</li>
-                    <li>Validated through clinical deployment at West China Hospital.</li>
+                    <li><strong>Knowledge Graph Construction:</strong> Extracted triples based on PrimeKG to build a domain-specific knowledge graph, aiming to create a comprehensive medical literature QA system.</li>
+                    <li><strong>Multimodal Emotion Recognition:</strong> Driven by psychological needs, engineered a robust module utilizing emotion2vector and other techniques to fuse speech emotion features with physiological signals, enhancing analytical accuracy.</li>
+                    <li><strong>Clinical Validation:</strong> Successfully validated the system's efficacy through deployment at West China Hospital, directly supporting real-world mental health interventions.</li>
                   </ul>
                 </div>
               </details>
@@ -242,24 +246,26 @@
                   <span class="acc-meta">May 2025 – Sep 2025</span>
                 </summary>
                 <div class="acc-body">
+                  <p class="acc-lede">A Knowledge Graph and RAG-based system designed to handle fuzzy user queries with strict nutritional awareness and safety constraints.</p>
                   <ul class="bullets">
-                    <li>Knowledge graph + RAG for nutrition-aware recommendations under fuzzy intents.</li>
-                    <li>USDA nutrient data + Recipe1M+; 1.5B LLM intent parsing; agentic safety verification (98.5% constraint satisfaction).</li>
-                    <li>0.825 semantic recall@5 on complex fuzzy intents, outperforming dense retrieval by 50%.</li>
+                    <li><strong>Data Integration & Parsing:</strong> Integrated USDA nutrient data with the Recipe1M+ dataset. Utilized a 1.5B parameter LLM for complex intent parsing.</li>
+                    <li><strong>Safety & Constraint Verification:</strong> Implemented an agentic critic mechanism for safety verification, achieving a 98.5% constraint satisfaction rate.</li>
+                    <li><strong>Retrieval Performance:</strong> Achieved 0.825 semantic recall@5 on complex fuzzy intents, surpassing traditional dense retrieval methods by 50%.</li>
                   </ul>
                 </div>
               </details>
 
               <details class="acc">
                 <summary class="acc-sum">
-                  <span class="acc-title">Sarcopenia Risk Prediction Model</span>
-                  <span class="acc-meta">Mar 2024 – Jan 2025</span>
+                  <span class="acc-title">Multimodal Mental Health Interaction System & LLM Reasoning Optimization</span>
+                  <span class="acc-meta">Oct 2024 – Dec 2025</span>
                 </summary>
                 <div class="acc-body">
+                  <p class="acc-lede">Focused on deep learning models for emotion recognition and exploring the reliability of LLM reasoning mechanisms.</p>
                   <ul class="bullets">
-                    <li>Machine learning models for sarcopenia risk prediction on a Western Chinese cohort.</li>
-                    <li>Clinical data cleaning and multi-dimensional feature engineering.</li>
-                    <li>Optimized SVM, Random Forest, XGBoost; validated generalization across populations.</li>
+                    <li><strong>Emotion Recognition:</strong> Designed and implemented a deep learning model integrating speech and text for high-precision emotion recognition, significantly outperforming unimodal baselines.</li>
+                    <li><strong>Reasoning Optimization:</strong> Surveyed state-of-the-art LLM reasoning techniques (CoT, ToT) to identify key reliability challenges in complex task-solving.</li>
+                    <li><strong>Bayesian-LLM Model:</strong> Proposed a Bayesian-LLM reasoning model for transparent, quantifiable assessment in educational contexts.</li>
                   </ul>
                 </div>
               </details>
