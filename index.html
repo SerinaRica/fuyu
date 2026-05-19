@@ -27,14 +27,19 @@
               <div class="name-row">
                 <h1 class="name" id="top">Yu Fu</h1>
                 <div class="hero-actions">
-                  <a class="btn" href="./Fu_Yu+CV.pdf" download>Download CV</a>
                   <button class="btn btn-ghost" type="button" data-open-cv>View CV</button>
-                  <a class="btn btn-ghost" href="mailto:fuyu05anastasia@163.com">Email</a>
+                  <a class="btn" href="./Fu_Yu+CV.pdf" download>Download CV</a>
                 </div>
               </div>
               <p class="headline">
                 Computer Science undergraduate building human-centered AI systems (HCI × AI, knowledge graphs, LLM reasoning, multimodal interaction).
               </p>
+              <div class="linkbar" aria-label="Academic links">
+                <a class="linkchip" href="mailto:fuyu05anastasia@163.com">Email</a>
+                <a class="linkchip" href="https://github.com/SerinaRica?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="linkchip" href="https://scholar.google.com/citations?user=7_AhI5oAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar</a>
+                <button class="linkchip linkchip-button" type="button" data-open-cv>CV</button>
+              </div>
               <div class="contact">
                 <a class="pill" href="mailto:fuyu05anastasia@163.com">fuyu05anastasia@163.com</a>
                 <a class="pill" href="mailto:fuyu05@stu.scu.edu.cn">fuyu05@stu.scu.edu.cn</a>
@@ -180,6 +185,14 @@
               <li>
                 <div class="pub">
                   <div class="pub-title">
+                    Yu Fu, Linyue Cai, Ruoyu Wu, Yongqi Kang, Yong Zhao*, “Nutrient-Aware Personalized Meal Recommendation Using Structured Food Knowledge and Constraint Verification”
+                  </div>
+                  <div class="pub-meta">Foods, 15(10), 1647 · DOI: <a href="https://doi.org/10.3390/foods15101647" target="_blank" rel="noopener">10.3390/foods15101647</a></div>
+                </div>
+              </li>
+              <li>
+                <div class="pub">
+                  <div class="pub-title">
                     Yu Fu, Yongqi Kang, Rongfang Bie et al., “EduRiskX: A Neuro-Symbolic Framework with F-Logic Reasoning for Early Academic Risk Prediction”
                   </div>
                   <div class="pub-meta">Preprint (Version 1) at Research Square · Feb 2026 · <a href="https://doi.org/10.21203/rs.3.rs-8877832/v1" target="_blank" rel="noopener">DOI: 10.21203/rs.3.rs-8877832/v1</a></div>
@@ -199,6 +212,14 @@
                     Linyue Cai, Chaojia Yu, Yongqi Kang, Yu Fu, Heng Zhang, Yong Zhao* (2025), “Practices, opportunities and challenges in the fusion of knowledge graphs and large language models”
                   </div>
                   <div class="pub-meta">Frontiers in Computer Science, 7, 1590632 · DOI: 10.3389/fcomp.2025.1590632</div>
+                </div>
+              </li>
+              <li>
+                <div class="pub">
+                  <div class="pub-title">
+                    Huiming Wang, Leilei Ouyang, Chang Xia, Yongqi Kang, Yu Fu, Yuqi Ouyang*, “AllocMV: Optimal Resource Allocation for Music Video Generation via Structured Persistent State”
+                  </div>
+                  <div class="pub-meta">F2S@ICML 2026 · Accepted · <a href="https://arxiv.org/abs/2605.10723" target="_blank" rel="noopener">arXiv:2605.10723</a></div>
                 </div>
               </li>
               <li>
@@ -447,7 +468,7 @@
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
       const dialog = document.getElementById("cvDialog");
-      const openBtn = document.querySelector("[data-open-cv]");
+      const openBtns = document.querySelectorAll("[data-open-cv]");
       const closeBtn = document.querySelector("[data-close-cv]");
 
       function openCv() {
@@ -464,7 +485,7 @@
         if (dialog.open) dialog.close();
       }
 
-      openBtn?.addEventListener("click", openCv);
+      openBtns.forEach((btn) => btn.addEventListener("click", openCv));
       closeBtn?.addEventListener("click", closeCv);
       dialog?.addEventListener("click", (e) => {
         if (e.target === dialog) closeCv();

@@ -185,6 +185,39 @@ body {
   font-size: 16px;
 }
 
+.linkbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.linkchip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 92px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(43, 124, 255, 0.22);
+  background: linear-gradient(135deg, rgba(43, 124, 255, 0.1), rgba(0, 179, 164, 0.08));
+  color: var(--text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.linkchip:hover {
+  transform: translateY(-1px);
+  transition: transform 140ms ease, border-color 140ms ease;
+  border-color: rgba(43, 124, 255, 0.4);
+}
+
+.linkchip-button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .contact {
   display: flex;
   flex-wrap: wrap;
