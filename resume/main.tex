@@ -1,122 +1,198 @@
 \documentclass[10pt,a4paper]{article}
 
-\usepackage[left=1.08cm,right=1.08cm,top=0.68cm,bottom=0.64cm]{geometry}
+\usepackage[left=1.35cm,right=1.35cm,top=1.05cm,bottom=1.15cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 
-\pagestyle{empty}
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{navy}{HTML}{17324D}
+\definecolor{teal}{HTML}{1E6D73}
+\definecolor{muted}{HTML}{56616D}
+\definecolor{rulegray}{HTML}{C9D1D8}
+\definecolor{soft}{HTML}{F3F6F7}
+
+\hypersetup{
+  pdftitle={Yu Fu - Curriculum Vitae},
+  pdfauthor={Yu Fu},
+  pdfsubject={Human-AI Interaction, Adaptive AI Agents, Human-Centered AI}
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot[L]{\color{muted}\fontsize{8}{9}\selectfont Yu Fu}
+\fancyfoot[R]{\color{muted}\fontsize{8}{9}\selectfont Page \thepage\ of 2}
+
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\emergencystretch}{2em}
-\definecolor{muted}{HTML}{4F5560}
-\definecolor{rulegray}{HTML}{737A84}
-
-\newcommand{\cvsection}[1]{%
-  \vspace{0.45em}%
-  {\fontsize{10.9}{12.0}\selectfont\bfseries #1}\par
-  \vspace{0.09em}\hrule height 0.45pt\vspace{0.22em}%
-}
-\newcommand{\entry}[2]{%
-  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{4.15cm}@{}}
-  {\bfseries #1} & {\itshape\color{muted}#2}
-  \end{tabularx}\vspace{-0.10em}%
-}
-\newcommand{\pub}[1]{\par\hangindent=1.05em\hangafter=1 #1\par}
 \setlist[itemize]{
   leftmargin=1.25em,
-  label=\raisebox{0.25ex}{\tiny$\bullet$},
-  itemsep=0.06em,
-  topsep=0.05em,
+  label=\textcolor{teal}{\raisebox{0.23ex}{\tiny$\bullet$}},
+  itemsep=0.23em,
+  topsep=0.18em,
   parsep=0pt,
   partopsep=0pt
 }
 
-\begin{document}
-\fontsize{8.55}{10.0}\selectfont
+\newcommand{\cvsection}[1]{%
+  \vspace{0.65em}%
+  \noindent
+  {\color{navy}\fontsize{11.8}{13.2}\selectfont\bfseries\MakeUppercase{#1}}\par
+  \vspace{0.09em}{\color{teal}\hrule height 0.7pt}\vspace{0.34em}%
+}
 
-\begin{center}
-  {\fontsize{21}{22.5}\selectfont\bfseries YU FU}\par
-  \vspace{0.07em}
-  {\fontsize{9.35}{10.5}\selectfont\bfseries HUMAN-AI INTERACTION \;|\; ADAPTIVE AI AGENTS \;|\; HUMAN-CENTERED AI}\par
-  \vspace{0.15em}
-  \href{mailto:fuyu1391881922@gmail.com}{fuyu1391881922@gmail.com}
-  \quad|\quad Sichuan University-Pittsburgh Institute\par
-  \vspace{0.09em}
-  \href{https://scholar.google.com/citations?user=7_AhI5oAAAAJ&hl=en}{Google Scholar (60+ citations)}
-  \quad|\quad
-  \href{https://serinarica.github.io/fuyu/}{Personal Website}
-\end{center}
+\newcommand{\project}[2]{%
+  \vspace{0.32em}%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{5.35cm}@{}}
+    {\color{navy}\fontsize{10.35}{11.6}\selectfont\bfseries #1} &
+    {\color{muted}\fontsize{8.65}{10.1}\selectfont\itshape #2}
+  \end{tabularx}%
+  \vspace{-0.16em}%
+}
+
+\newcommand{\experience}[3]{%
+  \vspace{0.25em}%
+  \begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{4.4cm}@{}}
+    {\color{navy}\bfseries #1} {\color{muted}#2} &
+    {\color{muted}\itshape #3}
+  \end{tabularx}%
+  \vspace{-0.18em}%
+}
+
+\newcommand{\summaryline}[1]{%
+  {\color{muted}\fontsize{8.9}{10.6}\selectfont\itshape #1}\par\vspace{0.05em}%
+}
+
+\newcommand{\metric}[1]{{\color{teal}\bfseries #1}}
+\newcommand{\pub}[1]{\par\hangindent=1.1em\hangafter=1 #1\par\vspace{0.13em}}
+
+\begin{document}
+\fontsize{9.25}{11.15}\selectfont
+
+% ==================== HEADER ====================
+{\color{navy}\fontsize{25}{27}\selectfont\bfseries YU FU}\par
+\vspace{0.12em}
+{\color{teal}\fontsize{10.2}{11.5}\selectfont\bfseries
+HUMAN-AI INTERACTION \;|\; ADAPTIVE AI AGENTS \;|\; HUMAN-CENTERED AI}
+\par\vspace{0.25em}
+\href{mailto:fuyu1391881922@gmail.com}{fuyu1391881922@gmail.com}
+\quad | \quad Sichuan University-Pittsburgh Institute
+\quad | \quad \href{https://scholar.google.com/citations?user=7_AhI5oAAAAJ&hl=en}{Google Scholar}
+\quad | \quad \href{https://serinarica.github.io/fuyu/}{Personal Website}
+
+\cvsection{Research Profile}
+I build interactive AI systems that translate complex human intent into inspectable actions while preserving meaningful human control. My work combines LLM/VLM agents, knowledge-grounded reasoning, multimodal interaction, and mixed-methods user research across presentation authoring, mental-health counseling, education, and long-term agent memory.
 
 \cvsection{Education}
-\entry{Sichuan University-Pittsburgh Institute}{Sep 2023 - Jun 2027 (expected)}
-B.Eng. in Computer Science and Technology \quad|\quad GPA: \textbf{3.84/4.00}\par
-\textbf{Honors:} National Scholarship (2024); First-Class University Scholarship (2025); Dean's List\par
-\vspace{0.08em}
-\entry{Tsinghua University}{Fall 2027}
-Incoming M.S. in Data Science and Information Technology
+\experience{Sichuan University-Pittsburgh Institute}{\; B.Eng. in Computer Science and Technology}{Sep 2023 - Jun 2027 (expected)}
+GPA: \textbf{3.84/4.00} \quad | \quad National Scholarship (2024) \quad | \quad First-Class University Scholarship (2025) \quad | \quad Dean's List
+
+\experience{Tsinghua University}{\; Incoming M.S. in Data Science and Information Technology}{Fall 2027}
 
 \cvsection{Selected Research Projects}
-\entry{ECHO: Explainable Co-editing for Presentation Slide Refinement}{First Author; ACM ICMI 2026}
+
+\project{ECHO: Explainable Co-editing for Presentation Slide Refinement}{First Author | ACM ICMI 2026 | Published}
+\summaryline{A multimodal slide co-editing system that converts natural-language requests into inspectable, user-confirmable edit plans.}
 \begin{itemize}
-  \item Designed a multimodal slide co-editing system that grounds natural-language requests in selected objects and converts intent into inspectable, schema-constrained edit plans. Implemented Plan-Confirm-Execute, stable object grounding, adaptive LLM/VLM routing, style memory, and rollback.
-  \item Built CoEdit-Eval and evaluated with 14 participants; task-completion time decreased by \textbf{25.8\%} and NASA-TLX workload by \textbf{20.8\%} versus the baseline.
+  \item \textbf{Research problem:} Investigated how generative editing agents can support ambiguous, object-level slide refinement without hiding consequential actions or removing user agency.
+  \item \textbf{System design:} Designed a Plan-Confirm-Execute workflow that grounds requests in selected slide objects, exposes schema-constrained plans before execution, and supports confirmation, revision, and rollback.
+  \item \textbf{AI architecture:} Implemented stable object grounding, adaptive LLM/VLM routing, style memory, and tool-level execution to maintain visual consistency while reducing unnecessary vision-model calls.
+  \item \textbf{Evaluation:} Built the CoEdit-Eval benchmark and ran a controlled study with 14 participants. Compared with the baseline, task-completion time decreased by \metric{25.8\%} and NASA-TLX workload by \metric{20.8\%}.
 \end{itemize}
 
-\vspace{0.10em}
-\entry{AICo \& DefenseMitigator: AI Counseling Systems}{CHI 2027 / UIST 2026 Poster}
+\project{AICo and DefenseMitigator: Human-Centered AI Counseling Systems}{Third Author on DefenseMitigator | UIST 2026 Poster | AICo submitted to CHI 2027}
+\summaryline{Two systems exploring adaptive guidance and expert supervision for safer, autonomy-preserving LLM-based counseling.}
 \begin{itemize}
-  \item For DefenseMitigator (third author), contributed to adaptive, evidence-grounded guidance using a psychological-defense knowledge graph and BDI model; synthesized formative studies with 6 counselors and 4 clients into autonomy-preserving interaction requirements.
-  \item AICo extends this work to expert-supervised, multi-client collaboration. A three-week deployment involved 6 licensed psychological experts, each overseeing 5 parallel conversations; behavioral records and interviews examined supervision and intervention timing. Submitted to CHI 2027.
+  \item \textbf{DefenseMitigator:} Contributed to an interactive counseling system that combines a psychological-defense knowledge graph with a BDI model to identify likely defense mechanisms and select evidence-grounded guidance strategies.
+  \item \textbf{Formative research:} Conducted and synthesized research with \metric{6 counselors and 4 clients}; translated findings into requirements for explanation, disclosure pacing, reversibility, and preservation of client autonomy.
+  \item \textbf{AICo:} Extended the work from one-to-one AI-user interaction to expert-supervised, multi-client collaboration. Structured expert knowledge, client context, and decision pathways so psychologists can review, revise, or override AI responses and reuse approved interventions.
+  \item \textbf{Field deployment:} Conducted a three-week deployment with \metric{6 licensed psychological experts}, each overseeing \metric{5 parallel client conversations}. Analyzed behavioral logs and semi-structured interviews to study intervention timing, workload, and alignment with professional reasoning.
 \end{itemize}
 
-\vspace{0.10em}
-\entry{MathTrace: Process-Aware Analysis of Mathematical Reasoning}{AI for Education / HCI}
+\project{MathTrace: Process-Aware Analysis of Mathematical Reasoning}{Core Researcher | AI for Education and HCI}
+\summaryline{A learning-analytics project that uses smart-pen traces to study how students reason, not only whether their final answers are correct.}
 \begin{itemize}
-  \item Co-designed pilots and analyzed timestamped smart-pen traces (pauses, revisions, backtracking, scratch-to-solution transitions); developed a replay/diagnostic dashboard linking handwriting events to step-level evidence and feedback.
+  \item \textbf{Study design:} Co-designed pilot tasks and data-collection procedures for capturing timestamped handwritten problem-solving traces in realistic learning settings.
+  \item \textbf{Process analysis:} Characterized pauses, revisions, backtracking, and transitions between scratch work and formal solutions to identify moments of uncertainty and strategy change.
+  \item \textbf{Interface concept:} Developed a replay and diagnostic dashboard linking handwriting events to step-level evidence, feedback, and learner-model updates for process-aware AI tutors.
 \end{itemize}
 
-\vspace{0.10em}
-\entry{AgentMV: State-Guided Multi-Agent Music Video Generation}{Fifth Author; AI4Art @ ECCV 2026}
+\project{EduRiskX: Interpretable Early Academic-Risk Prediction}{First Author | arXiv 2026}
+\summaryline{A neuro-symbolic framework that combines longitudinal behavior modeling with rule-supported explanations for early intervention.}
 \begin{itemize}
-  \item Contributed to a long-horizon framework coordinating specialist agents for music understanding, script planning, asset creation, segment generation, and final assembly through a Structured Persistent State.
+  \item \textbf{Model architecture:} Integrated Transformer-based time-series modeling with F-Logic reasoning to connect predictive signals with explicit, theory-aligned explanations.
+  \item \textbf{Early warning:} Evaluated on OULAD and identified at-risk students up to \metric{19 weeks in advance}, earlier than strong deep baselines such as PatchTST and iTransformer, which typically reached 15-16 weeks.
+  \item \textbf{Actionability:} Preserved strong AUC, F1, precision, and recall while generating interpretable risk factors and intervention suggestions that educators can inspect and act on.
 \end{itemize}
 
-\vspace{0.10em}
-\entry{CassMem: Knowledge-Graph Memory for Long-Term AI Agents}{Core Researcher; submitted to WWW 2027}
+\newpage
+
+% ==================== PAGE 2 ====================
+{\color{navy}\fontsize{18}{20}\selectfont\bfseries YU FU}\hfill
+{\color{muted}\fontsize{9}{10.5}\selectfont Selected Projects, Experience, and Publications}
+
+\cvsection{Selected Research Projects - Continued}
+
+\project{CassMem: Knowledge-Graph Memory for Long-Term AI Agents}{Core Researcher | Submitted to WWW 2027}
+\summaryline{A Cassandra-backed memory system for durable, inspectable, and efficient retrieval across long interaction histories.}
 \begin{itemize}
-  \item Developed Cassandra-backed graph memory with structured/raw representations, hybrid BM25+dense retrieval, and version-aware readiness checks. On 1,146 held-out LoCoMo queries, Z-score fusion achieved \textbf{MRR@10 = 0.550} versus 0.523 for compact RRF.
+  \item \textbf{Memory architecture:} Developed graph memory combining structured entities/relations with raw episodic records, supporting both interpretable traversal and high-recall semantic access.
+  \item \textbf{Hybrid retrieval:} Integrated BM25 and dense retrieval with fusion strategies, metadata constraints, and version-aware readiness checks for safe index updates and reproducible evaluation.
+  \item \textbf{Systems profiling:} Examined storage, retrieval latency, index consistency, and failure modes in a Cassandra-backed implementation designed for long-running adaptive agents.
+  \item \textbf{Evaluation:} On \metric{1,146 held-out LoCoMo queries}, Z-score fusion achieved \metric{MRR@10 = 0.550}, compared with 0.523 for compact RRF fusion.
 \end{itemize}
 
-\cvsection{Research \& Industry Experience}
-\entry{Tsinghua University, Pervasive Interaction Lab}{Research Intern; Mar-Aug 2026}
+\project{AgentMV: State-Guided Multi-Agent Music Video Generation}{Fifth Author | AI4Art at ECCV 2026 | Accepted}
+\summaryline{A long-horizon generation framework coordinating specialist agents through a Structured Persistent State (SPS).}
 \begin{itemize}
-  \item Developed a digital-employee agent for graduate-admissions consulting, integrating automated WeChat-group replies with Feishu conversation records and human-expert workflows; supported latency monitoring and conversation-quality review.
+  \item \textbf{Workflow design:} Contributed to a multi-agent pipeline spanning music understanding, narrative and script planning, visual-asset creation, segment generation, quality control, and final assembly.
+  \item \textbf{Persistent coordination:} Used SPS to externalize shared context, intermediate decisions, resource budgets, and progress so agents can recover from errors and coordinate across long generation chains.
+  \item \textbf{Research outcome:} The work was accepted at AI4Art at ECCV 2026 and is forthcoming in the ECCV proceedings.
 \end{itemize}
-\vspace{0.08em}
-\entry{Ernst \& Young (EY)}{AI \& Data Intern; Jan-Mar 2026}
+
+\project{Nutrient-Aware Meal Recommendation and ChefMind}{First Author | Foods 2026 and arXiv 2025}
+\summaryline{Knowledge-grounded recommendation systems for ambiguous meal requests under nutrition and safety constraints.}
 \begin{itemize}
-  \item Contributed to invoice recognition and Text-to-Slides across product research, solution evaluation, implementation, and integration.
+  \item Integrated USDA nutrient data with Recipe1M+ and structured food knowledge; used a 1.5B-parameter language model to translate fuzzy user intent into retrievable preferences and explicit constraints.
+  \item Implemented an agentic critic for nutrition and safety verification, achieving \metric{98.5\% constraint satisfaction}; obtained \metric{0.825 semantic Recall@5}, exceeding dense retrieval by 50\% on complex intents.
+  \item Developed ChefMind's Chain-of-Exploration to iteratively clarify underspecified needs, explore alternatives, and turn a vague request into an actionable recipe recommendation.
+\end{itemize}
+
+\cvsection{Research and Industry Experience}
+\experience{Tsinghua University, Pervasive Interaction Lab}{\; Research Intern}{Mar 2026 - Aug 2026}
+\begin{itemize}
+  \item Developed a digital-employee agent for graduate-admissions consulting, integrating automated WeChat-group replies, Feishu conversation records, and human-expert workflows. Supported latency monitoring, conversation-quality review, delayed-response behavior, and expert handoff.
+\end{itemize}
+
+\experience{Ernst and Young (EY)}{\; AI and Data Intern}{Jan 2026 - Mar 2026}
+\begin{itemize}
+  \item Contributed to invoice recognition and a Text-to-Slides module across product research, open-source solution evaluation, implementation, front-end rendering, testing, and integration into EYC.ai.
 \end{itemize}
 
 \cvsection{Selected Publications}
-{\fontsize{7.95}{9.15}\selectfont
-\pub{Fu, Y., Kang, Y., Zhou, Y., Zhao, Y.\quad \textit{ECHO: Explainable Co-editing with Human-in-the-loop Operations for Presentation Slide Refinement}. ACM ICMI 2026, pp. 99-107. \href{https://doi.org/10.1145/3776574.3831120}{doi:10.1145/3776574.3831120}.}
-\pub{Wu, Z., Zhang, R., Fu, Y., Kang, Y., Zhao, Y.\quad \textit{Automated Benchmark Construction for LLM Evaluation: A Source-Generator-Validator-Lifecycle Framework}. PRICAI 2026, accepted.}
-\pub{Nie, Z., Li, H., Fu, Y., Zhang, S., Lu, J., Yu, Z., Cai, J.\quad \textit{From Defense to Disclosure: Designing Interactive Systems with Multimodal Adaptive Guidance for LLM-Based Mental Health Counseling}. ACM UIST 2026 Poster, accepted.}
-\pub{Wang, H., Ouyang, L., Xia, C., Kang, Y., Fu, Y., Ouyang, Y.\quad \textit{AgentMV: A State-Guided Multi-Agent Framework for Budget-Aware Music Video Generation}. AI4Art @ ECCV 2026, accepted.}
-\pub{Fu, Y., Cai, L., Wu, R., Kang, Y., Zhao, Y.\quad \textit{Nutrient-Aware Personalized Meal Recommendation Using Structured Food Knowledge and Constraint Verification}. Foods, 15(10), 1647, 2026. \href{https://doi.org/10.3390/foods15101647}{doi:10.3390/foods15101647}.}
+{\fontsize{8.25}{9.65}\selectfont
+\pub{Fu, Y., Kang, Y., Zhou, Y., Zhao, Y. \textit{ECHO: Explainable Co-editing with Human-in-the-loop Operations for Presentation Slide Refinement}. ACM ICMI 2026, pp. 99-107. \href{https://doi.org/10.1145/3776574.3831120}{doi:10.1145/3776574.3831120}.}
+\pub{Wu, Z., Zhang, R., Fu, Y., Kang, Y., Zhao, Y. \textit{Automated Benchmark Construction for LLM Evaluation: A Source-Generator-Validator-Lifecycle Framework}. PRICAI 2026, accepted.}
+\pub{Nie, Z., Li, H., Fu, Y., Zhang, S., Lu, J., Yu, Z., Cai, J. \textit{From Defense to Disclosure: Designing Interactive Systems with Multimodal Adaptive Guidance for LLM-Based Mental Health Counseling}. ACM UIST 2026 Poster, accepted.}
+\pub{Fu, Y., Cai, L., Wu, R., Kang, Y., Zhao, Y. \textit{Nutrient-Aware Personalized Meal Recommendation Using Structured Food Knowledge and Constraint Verification}. Foods, 15(10), 1647, 2026. \href{https://doi.org/10.3390/foods15101647}{doi:10.3390/foods15101647}.}
+\pub{Wang, H., Ouyang, L., Xia, C., Kang, Y., Fu, Y., Ouyang, Y. \textit{AgentMV: A State-Guided Multi-Agent Framework for Budget-Aware Music Video Generation}. AI4Art at ECCV 2026, accepted.}
+\pub{Cai, L., Yu, C., Kang, Y., Fu, Y., Zhang, H., Zhao, Y. \textit{Practices, Opportunities and Challenges in the Fusion of Knowledge Graphs and Large Language Models}. Frontiers in Computer Science, 7, 1590632, 2025.}
 }
 
 \cvsection{Technical Skills}
-\textbf{Programming:}\quad Python, C/C++, Java, SQL \quad
-\textbf{AI:}\quad LLM/VLM APIs, RAG, knowledge graphs, agent workflows, hybrid retrieval, evaluation\par
-\textbf{HCI \& Evaluation:}\quad Interactive prototyping, formative studies, semi-structured interviews, user-study design, qualitative/quantitative analysis\par
-\textbf{Tools:}\quad PyTorch, FastAPI, Cassandra, Neo4j, Git \quad
-\textbf{English:}\quad IELTS 7.0
+\begin{tabularx}{\textwidth}{@{}>{\bfseries\color{navy}}p{3.0cm}X@{}}
+Programming & Python, C/C++, Java, SQL \\
+AI and Systems & LLM/VLM APIs, RAG, knowledge graphs, multi-agent workflows, hybrid retrieval, PyTorch, FastAPI, Cassandra, Neo4j \\
+HCI and Evaluation & Interactive prototyping, formative studies, semi-structured interviews, user-study design, behavioral-log analysis, qualitative/quantitative analysis \\
+Languages & Chinese (native), English (IELTS 7.0)
+\end{tabularx}
 
 \end{document}
