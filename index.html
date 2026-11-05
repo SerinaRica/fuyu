@@ -30,7 +30,6 @@
                 Human–AI interaction researcher building adaptive, interpretable, and human-centered AI systems.
               </p>
               <div class="hero-actions">
-                <button class="btn btn-ghost" type="button" data-open-cv>View CV</button>
                 <a class="btn" href="./Fu_Yu+CV.pdf" download>Download CV</a>
               </div>
               <div class="linkbar" aria-label="Academic links">
@@ -488,8 +487,8 @@
                 <div class="cta-sub">Best way to reach me: email.</div>
               </div>
               <div class="cta-actions">
-                <a class="btn" href="mailto:fuyu1391881922@gmail.com">Email me</a>
-                <a class="btn btn-ghost" href="./Fu_Yu+CV.pdf" download>Download CV</a>
+                <a class="text-link" href="mailto:fuyu1391881922@gmail.com">Email me</a>
+                <a class="btn" href="./Fu_Yu+CV.pdf" download>Download CV</a>
               </div>
             </div>
           </section>
@@ -509,45 +508,8 @@
         </footer>
       </div>
     </div>
-    <dialog class="dialog" id="cvDialog" aria-label="CV">
-      <div class="dialog-head">
-        <div class="dialog-title">Curriculum Vitae</div>
-        <div class="dialog-actions">
-          <a class="btn" href="./Fu_Yu+CV.pdf" target="_blank" rel="noopener noreferrer">Open in new tab</a>
-          <button class="btn btn-ghost" type="button" data-close-cv>Close</button>
-        </div>
-      </div>
-      <div class="dialog-body">
-        <object data="./Fu_Yu+CV.pdf" type="application/pdf" class="pdf">
-          <iframe src="./Fu_Yu+CV.pdf" class="pdf" title="CV PDF"></iframe>
-        </object>
-      </div>
-    </dialog>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-      const dialog = document.getElementById("cvDialog");
-      const openBtns = document.querySelectorAll("[data-open-cv]");
-      const closeBtn = document.querySelector("[data-close-cv]");
-
-      function openCv() {
-        if (!dialog) return;
-        if (typeof dialog.showModal === "function") {
-          dialog.showModal();
-          return;
-        }
-        window.open("./Fu_Yu+CV.pdf", "_blank", "noopener,noreferrer");
-      }
-
-      function closeCv() {
-        if (!dialog) return;
-        if (dialog.open) dialog.close();
-      }
-
-      openBtns.forEach((btn) => btn.addEventListener("click", openCv));
-      closeBtn?.addEventListener("click", closeCv);
-      dialog?.addEventListener("click", (e) => {
-        if (e.target === dialog) closeCv();
-      });
     </script>
   </body>
 </html>
