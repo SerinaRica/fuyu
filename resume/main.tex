@@ -1,0 +1,122 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[left=1.08cm,right=1.08cm,top=0.68cm,bottom=0.64cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{2em}
+\definecolor{muted}{HTML}{4F5560}
+\definecolor{rulegray}{HTML}{737A84}
+
+\newcommand{\cvsection}[1]{%
+  \vspace{0.45em}%
+  {\fontsize{10.9}{12.0}\selectfont\bfseries #1}\par
+  \vspace{0.09em}\hrule height 0.45pt\vspace{0.22em}%
+}
+\newcommand{\entry}[2]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}X>{\raggedleft\arraybackslash}p{4.15cm}@{}}
+  {\bfseries #1} & {\itshape\color{muted}#2}
+  \end{tabularx}\vspace{-0.10em}%
+}
+\newcommand{\pub}[1]{\par\hangindent=1.05em\hangafter=1 #1\par}
+\setlist[itemize]{
+  leftmargin=1.25em,
+  label=\raisebox{0.25ex}{\tiny$\bullet$},
+  itemsep=0.06em,
+  topsep=0.05em,
+  parsep=0pt,
+  partopsep=0pt
+}
+
+\begin{document}
+\fontsize{8.55}{10.0}\selectfont
+
+\begin{center}
+  {\fontsize{21}{22.5}\selectfont\bfseries YU FU}\par
+  \vspace{0.07em}
+  {\fontsize{9.35}{10.5}\selectfont\bfseries HUMAN-AI INTERACTION \;|\; ADAPTIVE AI AGENTS \;|\; HUMAN-CENTERED AI}\par
+  \vspace{0.15em}
+  \href{mailto:fuyu1391881922@gmail.com}{fuyu1391881922@gmail.com}
+  \quad|\quad Sichuan University-Pittsburgh Institute\par
+  \vspace{0.09em}
+  \href{https://scholar.google.com/citations?user=7_AhI5oAAAAJ&hl=en}{Google Scholar (60+ citations)}
+  \quad|\quad
+  \href{https://serinarica.github.io/fuyu/}{Personal Website}
+\end{center}
+
+\cvsection{Education}
+\entry{Sichuan University-Pittsburgh Institute}{Sep 2023 - Jun 2027 (expected)}
+B.Eng. in Computer Science and Technology \quad|\quad GPA: \textbf{3.84/4.00}\par
+\textbf{Honors:} National Scholarship (2024); First-Class University Scholarship (2025); Dean's List\par
+\vspace{0.08em}
+\entry{Tsinghua University}{Fall 2027}
+Incoming M.S. in Data Science and Information Technology
+
+\cvsection{Selected Research Projects}
+\entry{ECHO: Explainable Co-editing for Presentation Slide Refinement}{First Author; ACM ICMI 2026}
+\begin{itemize}
+  \item Designed a multimodal slide co-editing system that grounds natural-language requests in selected objects and converts intent into inspectable, schema-constrained edit plans. Implemented Plan-Confirm-Execute, stable object grounding, adaptive LLM/VLM routing, style memory, and rollback.
+  \item Built CoEdit-Eval and evaluated with 14 participants; task-completion time decreased by \textbf{25.8\%} and NASA-TLX workload by \textbf{20.8\%} versus the baseline.
+\end{itemize}
+
+\vspace{0.10em}
+\entry{AICo \& DefenseMitigator: AI Counseling Systems}{CHI 2027 / UIST 2026 Poster}
+\begin{itemize}
+  \item For DefenseMitigator (third author), contributed to adaptive, evidence-grounded guidance using a psychological-defense knowledge graph and BDI model; synthesized formative studies with 6 counselors and 4 clients into autonomy-preserving interaction requirements.
+  \item AICo extends this work to expert-supervised, multi-client collaboration. A three-week deployment involved 6 licensed psychological experts, each overseeing 5 parallel conversations; behavioral records and interviews examined supervision and intervention timing. Submitted to CHI 2027.
+\end{itemize}
+
+\vspace{0.10em}
+\entry{MathTrace: Process-Aware Analysis of Mathematical Reasoning}{AI for Education / HCI}
+\begin{itemize}
+  \item Co-designed pilots and analyzed timestamped smart-pen traces (pauses, revisions, backtracking, scratch-to-solution transitions); developed a replay/diagnostic dashboard linking handwriting events to step-level evidence and feedback.
+\end{itemize}
+
+\vspace{0.10em}
+\entry{AgentMV: State-Guided Multi-Agent Music Video Generation}{Fifth Author; AI4Art @ ECCV 2026}
+\begin{itemize}
+  \item Contributed to a long-horizon framework coordinating specialist agents for music understanding, script planning, asset creation, segment generation, and final assembly through a Structured Persistent State.
+\end{itemize}
+
+\vspace{0.10em}
+\entry{CassMem: Knowledge-Graph Memory for Long-Term AI Agents}{Core Researcher; submitted to WWW 2027}
+\begin{itemize}
+  \item Developed Cassandra-backed graph memory with structured/raw representations, hybrid BM25+dense retrieval, and version-aware readiness checks. On 1,146 held-out LoCoMo queries, Z-score fusion achieved \textbf{MRR@10 = 0.550} versus 0.523 for compact RRF.
+\end{itemize}
+
+\cvsection{Research \& Industry Experience}
+\entry{Tsinghua University, Pervasive Interaction Lab}{Research Intern; Mar-Aug 2026}
+\begin{itemize}
+  \item Developed a digital-employee agent for graduate-admissions consulting, integrating automated WeChat-group replies with Feishu conversation records and human-expert workflows; supported latency monitoring and conversation-quality review.
+\end{itemize}
+\vspace{0.08em}
+\entry{Ernst \& Young (EY)}{AI \& Data Intern; Jan-Mar 2026}
+\begin{itemize}
+  \item Contributed to invoice recognition and Text-to-Slides across product research, solution evaluation, implementation, and integration.
+\end{itemize}
+
+\cvsection{Selected Publications}
+{\fontsize{7.95}{9.15}\selectfont
+\pub{Fu, Y., Kang, Y., Zhou, Y., Zhao, Y.\quad \textit{ECHO: Explainable Co-editing with Human-in-the-loop Operations for Presentation Slide Refinement}. ACM ICMI 2026, pp. 99-107. \href{https://doi.org/10.1145/3776574.3831120}{doi:10.1145/3776574.3831120}.}
+\pub{Wu, Z., Zhang, R., Fu, Y., Kang, Y., Zhao, Y.\quad \textit{Automated Benchmark Construction for LLM Evaluation: A Source-Generator-Validator-Lifecycle Framework}. PRICAI 2026, accepted.}
+\pub{Nie, Z., Li, H., Fu, Y., Zhang, S., Lu, J., Yu, Z., Cai, J.\quad \textit{From Defense to Disclosure: Designing Interactive Systems with Multimodal Adaptive Guidance for LLM-Based Mental Health Counseling}. ACM UIST 2026 Poster, accepted.}
+\pub{Wang, H., Ouyang, L., Xia, C., Kang, Y., Fu, Y., Ouyang, Y.\quad \textit{AgentMV: A State-Guided Multi-Agent Framework for Budget-Aware Music Video Generation}. AI4Art @ ECCV 2026, accepted.}
+\pub{Fu, Y., Cai, L., Wu, R., Kang, Y., Zhao, Y.\quad \textit{Nutrient-Aware Personalized Meal Recommendation Using Structured Food Knowledge and Constraint Verification}. Foods, 15(10), 1647, 2026. \href{https://doi.org/10.3390/foods15101647}{doi:10.3390/foods15101647}.}
+}
+
+\cvsection{Technical Skills}
+\textbf{Programming:}\quad Python, C/C++, Java, SQL \quad
+\textbf{AI:}\quad LLM/VLM APIs, RAG, knowledge graphs, agent workflows, hybrid retrieval, evaluation\par
+\textbf{HCI \& Evaluation:}\quad Interactive prototyping, formative studies, semi-structured interviews, user-study design, qualitative/quantitative analysis\par
+\textbf{Tools:}\quad PyTorch, FastAPI, Cassandra, Neo4j, Git \quad
+\textbf{English:}\quad IELTS 7.0
+
+\end{document}
